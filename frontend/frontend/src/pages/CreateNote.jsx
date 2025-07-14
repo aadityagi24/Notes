@@ -16,7 +16,7 @@ export default function CreateNote() {
     }
 // http://localhost:5000
     try {
-      const response = await axios.post("https://notes-orpin-kappa.vercel.app//notes", {
+      const response = await axios.post("https://notes-orpin-kappa.vercel.app/notes", {
         title: title,
         content: ""
       });
