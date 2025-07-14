@@ -27,6 +27,8 @@ app.use(cors());
 app.use(express.json());
 
 
+app.get("/favicon.ico", (req, res) => res.status(204).end()); //on vercel err
+
 app.get("/", (req, res) => {
   res.send("Backend is activated and running!");
 });
