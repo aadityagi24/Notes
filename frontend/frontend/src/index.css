@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Create Note Page */
+.create-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+.create-note-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 2px 2px 10px gray;
+  text-align: center;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.note-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.note-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-button:hover {
+  background-color: darkblue;
+}
+
+/* Note Editor Page */
+.note-editor {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.note-header {
+  margin-bottom: 20px;
+}
+
+.note-header h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: black;
+}
+
+.note-info {
+  font-size: 14px;
+  color: black;
+  margin-top: 5px;
+}
+
+.note-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  resize: none;
+  background-color: #f9f9f9;
+  color: black;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.note-textarea:focus {
+  border-color: blue;
+  outline: none;
+}
