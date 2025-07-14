@@ -14,9 +14,9 @@ export default function CreateNote() {
       toast.error("Please enter a title");
       return;
     }
-
+// http://localhost:5000
     try {
-      const response = await axios.post("http://localhost:5000/notes", {
+      const response = await axios.post("https://notes-orpin-kappa.vercel.app//notes", {
         title: title,
         content: ""
       });
