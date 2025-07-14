@@ -23,7 +23,15 @@ const io = new Server(server, {
 connectDB();
 
 // middleware
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: "https://notes-u347.vercel.app", // ✅ allow your frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 
