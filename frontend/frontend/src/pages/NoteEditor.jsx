@@ -24,7 +24,7 @@ export default function NoteEditor() {
     socket.current = io("http://localhost:5000");
 
     // Get note from server
-    axios.get(`http://localhost:5000/notes/${id}`).then((res) => {
+    axios.get(`https://notes-orpin-kappa.vercel.app/notes/${id}`).then((res) => {
       setNote(res.data);
     });
 
@@ -67,7 +67,7 @@ export default function NoteEditor() {
     
     clearTimeout(timer.current);
     timer.current = setTimeout(() => {
-      axios.put(`http://localhost:5000/notes/${id}`, {
+      axios.put(`https://notes-orpin-kappa.vercel.app/notes/${id}`, {
         content: newText,
       });
       setSaveStatus("Saved");
