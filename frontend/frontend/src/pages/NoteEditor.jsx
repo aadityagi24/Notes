@@ -21,10 +21,10 @@ export default function NoteEditor() {
 
   useEffect(() => {
     // Connect to server
-    socket.current = io("http://localhost:5000");
+    socket.current = io("https://notes-backend-9uj4.onrender.com");
 
     // Get note from server
-    axios.get(`https://notes-orpin-kappa.vercel.app/notes/${id}`).then((res) => {
+    axios.get(`https://notes-backend-9uj4.onrender.com/notes/${id}`).then((res) => {
       setNote(res.data);
     });
 
@@ -67,7 +67,7 @@ export default function NoteEditor() {
     
     clearTimeout(timer.current);
     timer.current = setTimeout(() => {
-      axios.put(`https://notes-orpin-kappa.vercel.app/notes/${id}`, {
+      axios.put(`https://notes-backend-9uj4.onrender.com/notes/${id}`, {
         content: newText,
       });
       setSaveStatus("Saved");
