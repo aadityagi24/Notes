@@ -21,10 +21,10 @@ export default function NoteEditor() {
 
   useEffect(() => {
     // Connect to server
-    socket.current = io("https://notes-backend-9uj4.onrender.com");
+    socket.current = io("https://notes-g1uy.onrender.com/");
 
     // Get note from server
-    axios.get(`https://notes-backend-9uj4.onrender.com/notes/${id}`).then((res) => {
+    axios.get(`https://notes-g1uy.onrender.com/notes/${id}`).then((res) => {
       setNote(res.data);
     });
 
@@ -67,7 +67,7 @@ export default function NoteEditor() {
     
     clearTimeout(timer.current);
     timer.current = setTimeout(() => {
-      axios.put(`https://notes-backend-9uj4.onrender.com/notes/${id}`, {
+      axios.put(`https://notes-g1uy.onrender.com/notes/${id}`, {
         content: newText,
       });
       setSaveStatus("Saved");
