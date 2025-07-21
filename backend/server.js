@@ -25,7 +25,7 @@ connectDB();
 // middleware
 // app.use(cors());
 const corsOptions = {
-  origin: "https://notes-u347.vercel.app", // ✅ allow your frontend
+  origin: "https://notes-cyan-ten-20.vercel.app", //  allow your frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
